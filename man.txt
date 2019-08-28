@@ -11,4 +11,4 @@ NYI -r # rectangular prism
 NYI -sp # square pyramid
 NYI -tp # triangular pyramid
 NYI -co # cone
-NYI -tr # trapeziod
+NYI -tr # trapeziodal prism
