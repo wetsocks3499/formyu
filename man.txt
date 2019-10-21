@@ -1,4 +1,3 @@
-
 Usage: [command] -[shape] 
 
 commands:
@@ -6,8 +5,8 @@ v # calculates volume
 help # shows this screen
 
 shapes:
--c # cube
-NYI -r # rectangular prism
+-c      # cube
+-r      # rectangular prism
 NYI -sp # square pyramid
 NYI -tp # triangular pyramid
 NYI -co # cone
