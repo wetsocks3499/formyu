@@ -1,8 +1,12 @@
-Usage: [command] -[shape] 
+Usage: 
+[command] -[shape] 
+
+Examples: 
+v -c    # finds the volume of a cube 
 
 commands:
-v # calculates volume
-help # shows this screen
+v       # calculates volume
+help    # shows this screen
 
 shapes:
 -c      # cube
