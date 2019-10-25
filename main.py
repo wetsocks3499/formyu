@@ -1,9 +1,9 @@
-# formyu 0.1 by c. yerger 
+# formyu 0.1 by c. yerger
 import sys
 print('''
 ~-~-~-~-~-~-~-~-~-
 
-welcome to formyu 
+welcome to formyu
 
 ~-~-~-~-~-~-~-~-~-''')
 ## fallback def
@@ -15,10 +15,17 @@ def script():
     formula = input()
     cubeVolumeVar = 'v -c'
     recPrisVolumeVar = 'v -r'
+    squarePyramidVolumeVar = 'v -sp'
     HELP = 'help'
     EXIT = 'exit'
 ## useful def
-    def cubeVolumeFunction(): 
+    def squarePyramidVolumeFunction():
+        s = float(input('Edge length of the pyramid: '))
+        h = float(input('Height of the pyramid: '))
+        outprint = (s ** 2) * (h / 3)
+        print(round(outprint, 2), 'units cubed.')
+        script()
+    def cubeVolumeFunction():
         s = float(input('Side length of cube: '))
         outprint = s ** 3
         print('\nVolume = ')
@@ -41,6 +48,8 @@ def script():
 	    cubeVolumeFunction()
     if formula == recPrisVolumeVar:
         recPrisVolumeFunc()
+    if formula == squarePyramidVolumeVar:
+        squarePyramidVolumeFunction()
     if formula == HELP:
 	    helpFunc()
     if formula == EXIT:
