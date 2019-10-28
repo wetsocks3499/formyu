@@ -1,7 +1,8 @@
 # by c. yerger
 # imports
 version = 0.4
-from mpl_toolkits import mplot3d as mpl
+import mplot
+from mpl_toolkits import mplot3
 import numpy as np
 import sys
 ## globals
