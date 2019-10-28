@@ -1,5 +1,18 @@
-# formyu 0.1 by c. yerger
+# by c. yerger
+# imports
+version = 0.4
+from mpl_toolkits import mplot3d as mpl
+import numpy as np
 import sys
+## globals
+formula = input()
+cubeVolumeVar = 'v -c'
+recPrisVolumeVar = 'v -r'
+squarePyramidVolumeVar = 'v -sp'
+HELP = 'help'
+EXIT = 'exit'
+VERSION = '--version'
+## splash
 print('''
 ~-~-~-~-~-~-~-~-~-
 
@@ -11,13 +24,6 @@ def exit():
     sys.exit()
 def script():
     print('\n')
-## declare
-    formula = input()
-    cubeVolumeVar = 'v -c'
-    recPrisVolumeVar = 'v -r'
-    squarePyramidVolumeVar = 'v -sp'
-    HELP = 'help'
-    EXIT = 'exit'
 ## useful def
     def squarePyramidVolumeFunction():
         s = float(input('Edge length of the pyramid: '))
@@ -43,6 +49,9 @@ def script():
         f = open("man.txt", 'r')
         print(f.read())
         script()
+    def showVersion():
+        print('You are running version ',string(version))
+        script()
 ## redirect
     if formula == cubeVolumeVar:
 	    cubeVolumeFunction()
@@ -52,6 +61,8 @@ def script():
         squarePyramidVolumeFunction()
     if formula == HELP:
 	    helpFunc()
+    if formula == VERSION:
+        showVersion()
     if formula == EXIT:
 	    exit()
 ## run
