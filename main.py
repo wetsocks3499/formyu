@@ -50,7 +50,7 @@ def script():
         print(f.read())
         script()
     def showVersion():
-        print('You are running version ',string(version))
+        print('You are running version ', version)
         script()
 ## redirect
     if formula == cubeVolumeVar:
