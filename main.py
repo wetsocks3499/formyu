@@ -8,10 +8,10 @@ welcome to formyu
 ~-~-~-~-~-~-~-~-~-''')
 # imports
 version = 0.4
-import matplotlib
 import sys
 ## globals
-formula = input()
+running = False
+formula = ''
 cubeVolumeVar = 'v -c'
 recPrisVolumeVar = 'v -r'
 squarePyramidVolumeVar = 'v -sp'
@@ -46,19 +46,21 @@ def showVersion():
     print('You are running version ', version)
 ## run def
 def script():
-    print('\n')
+    while running == True:
+        formula = input()
 ## redirect
-    if formula == cubeVolumeVar:
-	    cubeVolumeFunction()
-    if formula == recPrisVolumeVar:
-        recPrisVolumeFunc()
-    if formula == squarePyramidVolumeVar:
-        squarePyramidVolumeFunction()
-    if formula == HELP:
-	    helpFunc()
-    if formula == VERSION:
-        showVersion()
-    if formula == EXIT:
-	    exit()
+        if formula == cubeVolumeVar:
+	        cubeVolumeFunction()
+        if formula == recPrisVolumeVar:
+            recPrisVolumeFunc()
+        if formula == squarePyramidVolumeVar:
+            squarePyramidVolumeFunction()
+        if formula == HELP:
+	        helpFunc()
+        if formula == VERSION:
+            showVersion()
+        if formula == EXIT:
+	        running = False
+            #exit()
 ## run call
 script()
