@@ -1,0 +1,11 @@
+mplot
+mplotlib
+numpy
+sys
+freetype-py
+libpng
+setuptools
+cycler
+python-dateutil
+kiwisolver
+pyparsing
