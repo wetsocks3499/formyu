@@ -1,9 +1,8 @@
-# by c. yerger
+# by c. yerger, runs on Python 3
 # imports
 version = 0.4
 import mplot
-from mpl_toolkits import mplot3
-import numpy as np
+import matplotlib
 import sys
 ## globals
 formula = input()
