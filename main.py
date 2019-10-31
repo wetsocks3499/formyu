@@ -5,12 +5,12 @@ print('''
 
 welcome to formyu
 
-~-~-~-~-~-~-~-~-~-''')
+~-~-~-~-~-~-~-~-~-
+''')
 # imports
 version = 0.4
 import sys
 ## globals
-running = False
 formula = ''
 cubeVolumeVar = 'v -c'
 recPrisVolumeVar = 'v -r'
@@ -46,21 +46,22 @@ def showVersion():
     print('You are running version ', version)
 ## run def
 def script():
+    running = True
     while running == True:
         formula = input()
 ## redirect
         if formula == cubeVolumeVar:
-	        cubeVolumeFunction()
+            cubeVolumeFunction()
         if formula == recPrisVolumeVar:
             recPrisVolumeFunc()
         if formula == squarePyramidVolumeVar:
             squarePyramidVolumeFunction()
         if formula == HELP:
-	        helpFunc()
+            helpFunc()
         if formula == VERSION:
             showVersion()
         if formula == EXIT:
-	        running = False
-            #exit()
+            running = False
+            exit()
 ## run call
 script()
