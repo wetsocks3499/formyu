@@ -11,16 +11,15 @@ welcome to formyu
 version = 0.4
 import sys
 ## globals
-formula = input("Please select an option:\nCube [1]\nRectangular Prism\nSquare-based Pyramid\nTrapezium\nTriangular Pyramid\nCone\nExit")
+formula = input("Please select an option:\nCube [1]\nRectangular Prism [2]\nSquare-Based Pyramid [3]\nTrapezium [4]\nTriangular Pyramid [5]\nCone [6]\nExit[7]\nVersion [8]\n")
 cubeVolumeVar = '1'
 recPrisVolumeVar = '2'
 squarePyramidVolumeVar = '3'
 trapeziumVolumeVar = '4'
 trianglePyramidVolumeVar = '5'
 coneVar = '6'
-HELP = '7'
-EXIT = '8'
-VERSION = '9'
+EXIT = '7'
+VERSION = '8'
 ## fallback def
 def exit():
     sys.exit()
@@ -59,9 +58,6 @@ def trapeziumVolumeFunc():
     outprint = (0.5 * (wOne + wTwo) * h) * l
     print('Volume = ', round(outprint, 2), 'units cubed.')
 
-def helpFunc():
-    f = open("man.txt", 'r')
-    print(f.read())
 def showVersion():
     print('You are running version ', version)
 ## run def
@@ -78,8 +74,6 @@ def script():
             squarePyramidVolumeFunction()
         if formula == trapeziumVolumeVar:
             trapeziumVolumeFunc()
-        if formula == HELP:
-            helpFunc()
         if formula == VERSION:
             showVersion()
         if formula == EXIT:
