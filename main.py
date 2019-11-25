@@ -24,6 +24,12 @@ VERSION = 'version'
 def exit():
     sys.exit()
 ## function def
+def trianglePyramidVolumeFunction():
+    lb = float(input('Length of the base: '))
+    hb = float(input('Height of the base: '))
+    hp = float(input('Height of the pyramid: '))
+    outprint = ((lb*hb)*hp)/3
+    print(round(outprint, 2), 'units cubed.')
 def squarePyramidVolumeFunction():
     s = float(input('Edge length of the pyramid: '))
     h = float(input('Height of the pyramid: '))
