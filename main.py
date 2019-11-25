@@ -11,15 +11,16 @@ welcome to formyu
 version = 0.4
 import sys
 ## globals
-formula = ''  # basically, a nil storage value.
-cubeVolumeVar = 'v -c'
-recPrisVolumeVar = 'v -r'
-squarePyramidVolumeVar = 'v -sp'
-trapeziumVolumeVar = 'v -t'
-HELP = 'help'
-EXIT = 'exit'
-EXITALT = 'quit'
-VERSION = 'version'
+formula = input("Please select an option:\nCube [1]\nRectangular Prism\nSquare-based Pyramid\nTrapezium\nTriangular Pyramid\nCone\nExit")
+cubeVolumeVar = '1'
+recPrisVolumeVar = '2'
+squarePyramidVolumeVar = '3'
+trapeziumVolumeVar = '4'
+trianglePyramidVolumeVar = '5'
+coneVar = '6'
+HELP = '7'
+EXIT = '8'
+VERSION = '9'
 ## fallback def
 def exit():
     sys.exit()
@@ -82,9 +83,6 @@ def script():
         if formula == VERSION:
             showVersion()
         if formula == EXIT:
-            running = False
-            exit()
-        if formula == EXITALT:  # Look, I know this is dirty, but the loop gets fussy if I use the "or" operator.
             running = False
             exit()
 ## run call
