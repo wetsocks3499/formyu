@@ -11,19 +11,25 @@ welcome to formyu
 version = 0.4
 import sys
 ## globals
-formula = ''  # basically, a nil storage value.
-cubeVolumeVar = 'v -c'
-recPrisVolumeVar = 'v -r'
-squarePyramidVolumeVar = 'v -sp'
-trapeziumVolumeVar = 'v -t'
-HELP = 'help'
-EXIT = 'exit'
-EXITALT = 'quit'
-VERSION = 'version'
+formula = input("Please select an option:\nCube [1]\nRectangular Prism [2]\nSquare-Based Pyramid [3]\nTrapezium [4]\nTriangular Pyramid [5]\nCone [6]\nExit[7]\nVersion [8]\n")
+cubeVolumeVar = '1'
+recPrisVolumeVar = '2'
+squarePyramidVolumeVar = '3'
+trapeziumVolumeVar = '4'
+trianglePyramidVolumeVar = '5'
+coneVar = '6'
+EXIT = '7'
+VERSION = '8'
 ## fallback def
 def exit():
     sys.exit()
 ## function def
+def trianglePyramidVolumeFunction():
+    lb = float(input('Length of the base: '))
+    hb = float(input('Height of the base: '))
+    hp = float(input('Height of the pyramid: '))
+    outprint = ((lb*hb)*hp)/3
+    print(round(outprint, 2), 'units cubed.')
 def squarePyramidVolumeFunction():
     s = float(input('Edge length of the pyramid: '))
     h = float(input('Height of the pyramid: '))
@@ -52,9 +58,6 @@ def trapeziumVolumeFunc():
     outprint = (0.5 * (wOne + wTwo) * h) * l
     print('Volume = ', round(outprint, 2), 'units cubed.')
 
-def helpFunc():
-    f = open("man.txt", 'r')
-    print(f.read())
 def showVersion():
     print('You are running version ', version)
 ## run def
@@ -71,14 +74,9 @@ def script():
             squarePyramidVolumeFunction()
         if formula == trapeziumVolumeVar:
             trapeziumVolumeFunc()
-        if formula == HELP:
-            helpFunc()
         if formula == VERSION:
             showVersion()
         if formula == EXIT:
-            running = False
-            exit()
-        if formula == EXITALT:  # Look, I know this is dirty, but the loop gets fussy if I use the "or" operator.
             running = False
             exit()
 ## run call
