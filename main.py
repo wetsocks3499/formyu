@@ -12,6 +12,7 @@ version = 0.4
 import sys
 ## globals
 formula = input("Please select an option:\nCube [1]\nRectangular Prism [2]\nSquare-Based Pyramid [3]\nTrapezium [4]\nTriangular Pyramid [5]\nCone [6]\nExit[7]\nVersion [8]\n")
+print(">>> ")
 cubeVolumeVar = '1'
 recPrisVolumeVar = '2'
 squarePyramidVolumeVar = '3'
